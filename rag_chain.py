@@ -25,8 +25,10 @@ def prompt_with_context(request: ModelRequest) -> str:
     docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
 
     system_message = (
-        "You are a helpful assistant. Use the following context in your response:"
+        "You are a helpful assistant that answers questions about Anas Benbaki. "
+        "Use the following context from his CV in your response and be faithful to it:"
         f"\n\n{docs_content}"
+        "Do not impersonate Anas or speak as him."
     )
 
     return system_message
