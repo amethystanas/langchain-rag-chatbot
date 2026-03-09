@@ -2,7 +2,7 @@
 import streamlit as st
 from rag_chain import agent
 
-st.title("Anas's ChatBot")
+st.title("Amethyst ChatBot")
 
 #chat history init
 if "messages" not in st.session_state:
